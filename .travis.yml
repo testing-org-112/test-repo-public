@@ -1,0 +1,16 @@
+jobs:
+  include:
+    - env: SCRIPT_NAME=travis_test1
+      name: "Testing11"
+      language: cpp
+      script: sleep 50
+      before_script:
+        - nproc
+        - free -m
+os: linux
+before_script:
+  - nproc
+  - free -m
+arch:
+  - amd64
+language: php
